@@ -10,13 +10,14 @@ public class Patient implements IPatient {
         this.producer = producer;
 
         attributes = producer.requestAttributes();
-        String instances[][] = producer.requestInstances();
+        String[][] instances = producer.requestInstances();
+        if (instances != null){
+            patientN = (int)(Math.random() * instances.length);
+            patientInstance = instances[patientN];
 
-        patientN = (int)(Math.random() * instances.length);
-        patientInstance = instances[patientN];
-
-        System.out.println("Patient selected: " + patientN);
-        System.out.println("Patient's disease: " + patientInstance[attributes.length - 1]);
+            System.out.println("Patient selected: " + patientN);
+            System.out.println("Patient's disease: " + patientInstance[attributes.length - 1]);
+        }
     }
 
     public String ask(String question) {
