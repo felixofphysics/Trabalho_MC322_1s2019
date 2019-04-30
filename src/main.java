@@ -3,8 +3,7 @@ public class main{
         // instanciando o componente DataSet
         IDataSet dataset = new DataSetComponent();
         dataset.setDataSource("/home/rjallais/IdeaProjects/" +
-                "MC322_Eficiencia/src/zombie-health-" +
-                "new-cases20.csv");
+                "MC322_Eficiencia/src/zombie-health-cases500.csv");
 
         // instanciando o componente paciente
         IPatient aPatient = new Patient();
